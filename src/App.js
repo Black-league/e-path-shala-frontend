@@ -1,11 +1,15 @@
 import './App.css';
-import Register from './pages/Register';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
+import Header from './components/nav/Header';
 
 function App() {
   return (
-    <div className="App">
-      <Register />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes />
+      </div>
+    </Router>
   );
 }
 
