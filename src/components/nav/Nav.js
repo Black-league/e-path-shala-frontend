@@ -5,7 +5,7 @@ import { IoMdChatbubbles } from 'react-icons/io'
 import { MdAccountCircle } from 'react-icons/md'
 
 import './Nav.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 function Nav() {
     return (

@@ -1,10 +1,9 @@
 import React, {
-    useState,
-    useEffect
+    useState
 } from 'react';
 import { Link } from 'react-router-dom';
 
-// const uri = process.env.REACT_BACKEND_URI;
+const uri = process.env.REACT_APP_BACKEND_URI || 'http://localhost:6969';
 
 function Register() {
 
@@ -17,7 +16,7 @@ function Register() {
     const [error, setError] = useState('');
     const [radio, setRadio] = useState('');
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e) {
         e.preventDefault();
         if (password !== confirmPassword) {
             setError('Passwords do not match');
@@ -31,13 +30,29 @@ function Register() {
                 gender: radio
             };
 
+            const response = await fetch(`${uri}/api/students-register`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            });
+
+            const data = await response.json();
+            if (data.status === 'success') {
+                setError('');
+                window.location.href = '/login';
+            } else {
+                setError(data.message);
+                console.log(error);
+            }
         }
     }
 
     return (
         <div className='container'>
             <div className='form-container'>
-                <form onSubmit={(e) => handleSubmit(e)}>
+                <form onSubmit={handleSubmit}>
                     <div className='form-header'>
                         <h1>Sign Up</h1>
                     </div>
