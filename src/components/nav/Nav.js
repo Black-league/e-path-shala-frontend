@@ -7,7 +7,12 @@ import { MdAccountCircle } from 'react-icons/md'
 import './Nav.css'
 // import { Link } from 'react-router-dom'
 
-function Nav() {
+function Nav(props) {
+
+    const {
+        userName
+    } = props
+
     return (
         <div className='nav-container'>
             <div className='nav-header'>
@@ -38,7 +43,7 @@ function Nav() {
                     <div className='nav-icon'>
                         <MdAccountCircle size={30} />
                         <span>
-                            Faizan Ahmed
+                            {userName}
                         </span>
                     </div>
 

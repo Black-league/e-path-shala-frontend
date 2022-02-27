@@ -26,8 +26,8 @@ function Login() {
 
             const data = await response.json();
 
-            if (data.user) {
-                localStorage.setItem('token', data.user)
+            if (data.token) {
+                localStorage.setItem('token', data.token);
                 alert("Login Successfully...");
                 window.location.href = '/classroom'
             } else {

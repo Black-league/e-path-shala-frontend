@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100px;
     justify-content: space-between;
     align-items: flex-start;    
 }
@@ -9,10 +10,16 @@
 .nav-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;    
     margin-bottom: 40px;
     font-size: 1.2rem;    
+}
+
+.nav-header > span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white-cyan);
 }
 
 .nav-body {    
@@ -90,4 +97,5 @@ nav > ul > li:hover {
 
 .nav-icon > span {
     margin: 0 5px;
+    color: var(--white-cyan);
 }
