@@ -18,7 +18,7 @@
 
 .nav-header > span{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 300;
     color: var(--white-cyan);
 }
 
@@ -88,14 +88,23 @@ nav > ul > li:hover {
     margin-left: 10px;
     margin-top: 20px;
     padding: 10px;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-icon:hover{
-    color: white;
+    color: var(--green);
     cursor: pointer;
 }
 
 .nav-icon > span {
+    font-size: 1rem;
+    font-weight: 300;
     margin: 0 5px;
     color: var(--white-cyan);
+}
+
+.nav-icon>span:hover{
+    color: var(--green);
+    cursor: pointer;
 }

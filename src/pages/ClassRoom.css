@@ -2,14 +2,48 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+
+  transition: 1s ease-in-out;
 }
 
 .room-content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 100%;
 
   margin-top: 40px;
+}
+
+.room-posts {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.room-content > h3{
+  color: var(--white-cyan);
+  font-size: 1.2rem;
+ font-weight: 400;
+ text-transform: uppercase;
+}
+
+.room-posts > h3{
+  color: var(--white-cyan);
+  font-size: 1.2rem;
+  font-weight: 400;
+ 
+}
+
+
+
+.room-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
 }

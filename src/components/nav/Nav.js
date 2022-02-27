@@ -18,7 +18,7 @@ function Nav(props) {
             <div className='nav-header'>
                 <Header />
                 <span>
-                    e-Path-Shala
+                    An Online Classroom
                 </span>
             </div>
             <div className='nav-body'>

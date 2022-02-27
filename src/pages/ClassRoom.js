@@ -6,6 +6,8 @@ import jwtDecode from 'jwt-decode'
 import Nav from '../components/nav/Nav'
 import './ClassRoom.css'
 import PosterCard from '../components/cards/PosterCard'
+import PostCard from '../components/cards/PostCard'
+import Posts from '../components/contents/Posts'
 
 function ClassRoom() {
 
@@ -31,8 +33,17 @@ function ClassRoom() {
                 userName={userName}
             />
             <div className='room-content'>
-                <PosterCard isPostType={false} />
-
+                <div className='room-header'>
+                    <PosterCard
+                        author={userName}
+                    />
+                </div>
+                <h3>
+                    Posts
+                </h3>
+                <div className='room-posts'>
+                    <Posts />
+                </div>
             </div>
         </div>
     )

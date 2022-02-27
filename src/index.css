@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to bottom right, var(--green), var(--blue));
+  background-attachment: fixed;
 }
 
 code {
